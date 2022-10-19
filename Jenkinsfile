@@ -11,10 +11,10 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     apt-get update && apt-get install -y cmake
-                    ls
+                    ls ..
                     cd build
                     pwd
-                    cmake -G "Unix Makefiles" ../audacity
+                    cmake -G "Unix Makefiles" ../audacity-jenkins-pipeline
                     make -j`nproc`
                     cd bin/Debug
                     mkdir "Portable Settings"
