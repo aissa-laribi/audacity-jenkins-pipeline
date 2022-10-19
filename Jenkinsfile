@@ -5,6 +5,7 @@ pipeline {
             agent {
                 docker {
                     image 'ubuntu:latest'
+                    args '--user 0:0'
                 }
             }
             steps {
