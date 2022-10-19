@@ -18,7 +18,7 @@ pipeline {
                     pip3 install conan --user
                     pwd
                     cd build
-                    cmake -G "Unix Makefiles" ../audacity-pipeline
+                    cmake -G "Unix Makefiles" ../
                     make -j`nproc`
                 '''
             }
