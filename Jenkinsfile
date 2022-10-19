@@ -10,19 +10,12 @@ pipeline {
             }
             steps {
                 sh '''#!/bin/bash
-                    apt-get update && apt-get install -y cmake
-                    ls ..
+                    apt-get update && apt-get install -y build-essential cmake git python3-pip 
+                    apt-get install -y libgtk2.0-dev libasound2-dev libjack-jackd2-dev uuid-dev mosquitto
+                    pip3 install conan --user
                     cd build
-                    pwd
-                    cmake -G "Unix Makefiles" ../audacity-jenkins-pipeline
+                    cmake -G "Unix Makefiles" ../
                     make -j`nproc`
-                    cd bin/Debug
-                    mkdir "Portable Settings"
-                    ./audacity
-                    cd ../../..
-                    pwd
-                    make install
-
                 '''
             }
         }
