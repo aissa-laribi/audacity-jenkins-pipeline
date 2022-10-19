@@ -11,8 +11,8 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                     apt-get update && apt-get install -y cmake
-                    pwd
-                    mkdir build && cd build
+                    ls
+                    cd build
                     pwd
                     cmake -G "Unix Makefiles" ../audacity
                     make -j`nproc`
