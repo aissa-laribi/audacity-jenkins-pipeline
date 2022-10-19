@@ -16,7 +16,7 @@ pipeline {
                     apt-get update &&  apt-get install -y build-essential cmake git python3-pip
                     apt-get install -y libgtk2.0-dev libasound2-dev libjack-jackd2-dev uuid-dev mosquitto
                     pip3 install conan --user
-                    mkdir build && cd build
+                    cd build
                     cmake -G "Unix Makefiles" ../
                     make -j`nproc`
                 '''
