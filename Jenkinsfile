@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'ubuntu:latest'
+                    image 'ubuntu:focal'
                     args '--user 0:0'
                 }
             }
