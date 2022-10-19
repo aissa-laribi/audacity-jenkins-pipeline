@@ -19,7 +19,7 @@ pipeline {
                     cd build
                     rm CMakeCache.txt && rm -r CMakeFiles
                     cmake -G "Unix Makefiles" ../
-                    make -j`nproc`
+                    make -j 1 `nproc`
                 '''
             }
         }
